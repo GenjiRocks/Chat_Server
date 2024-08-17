@@ -29,7 +29,7 @@ exports.signup = async(req,res)=>{
         })
 
         if(newUser){
-            // generating jwt token
+            // generating jwt token and saving it into cookies
            generateTokenAndSetCookie(newUser._id,res)
 
             await newUser.save()
