@@ -5,8 +5,9 @@ require('./connection')
 
 
 const app = express()
+app.use(express.json())
 
-app.use("/api/auth",router)
+app.use("/api/auth",router) /* middleware */
 
 
 port = 4000 || process.env.port
